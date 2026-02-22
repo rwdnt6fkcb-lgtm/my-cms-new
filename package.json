@@ -1,26 +1,32 @@
 {
   "name": "my-cms",
   "version": "1.0.0",
-  "description": "<<<<<<<# My CMS Project",
-  "main": "index.js",
+  "description": "Moderný CMS postavený na SvelteKit",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node build/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rwdnt6fkcb-lgtm/my-cms-new.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rwdnt6fkcb-lgtm/my-cms-new/issues"
-  },
-  "homepage": "https://github.com/rwdnt6fkcb-lgtm/my-cms-new#readme",
   "devDependencies": {
+    "@sveltejs/adapter-node": "^5.5.3",
     "@sveltejs/kit": "^2.53.0",
     "@sveltejs/vite-plugin-svelte": "^6.2.4",
     "svelte": "^5.53.2",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.6.2",
+    "marked": "^17.0.3",
+    "sanitize-html": "^2.17.1"
+  },
+  "overrides": {
+    "cookie": "^0.7.2"
   }
 }
